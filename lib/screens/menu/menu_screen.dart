@@ -1,7 +1,7 @@
 import 'dart:math';
 
-import 'package:example_blocs/screens/dice_screen.dart';
-import 'package:example_blocs/screens/personal_card_screen.dart';
+import 'package:example_blocs/screens/dice/dice_screen.dart';
+import 'package:example_blocs/screens/personal_card/personal_card_screen.dart';
 import 'package:flutter/material.dart';
 
 class MenuScreen extends StatelessWidget {

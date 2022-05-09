@@ -1,10 +1,15 @@
-import 'package:example_blocs/screens/counter_screen.dart';
-import 'package:example_blocs/screens/dice_screen.dart';
-import 'package:example_blocs/screens/menu_screen.dart';
-import 'package:example_blocs/screens/personal_card_screen.dart';
+import 'package:example_blocs/screens/counter/counter_screen.dart';
+import 'package:example_blocs/screens/dice/dice_screen.dart';
+import 'package:example_blocs/screens/login/login_screen.dart';
+import 'package:example_blocs/screens/menu/menu_screen.dart';
+import 'package:example_blocs/screens/personal_card/personal_card_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
@@ -18,8 +23,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      initialRoute: MenuScreen.id,
+      initialRoute: LoginScreen.id,
       routes: {
+        LoginScreen.id: (context) => const LoginScreen(),
         MenuScreen.id: (context) => const MenuScreen(),
         CounterScreen.id: (context) => const CounterScreen(),
         DiceScreen.id: (context) => const DiceScreen(),
