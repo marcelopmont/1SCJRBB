@@ -8,7 +8,7 @@ class RoundedButton extends StatelessWidget {
   }) : super(key: key);
 
   final String text;
-  final Function() onPressed;
+  final VoidCallback onPressed;
 
   @override
   Widget build(BuildContext context) {

@@ -37,6 +37,7 @@ dependencies:
   google_fonts: ^2.3.2
   url_launcher: ^6.1.0
   firebase_auth: ^3.3.17
+  http: ^0.13.4
 
 dev_dependencies:
   flutter_test:

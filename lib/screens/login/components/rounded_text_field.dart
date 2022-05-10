@@ -19,8 +19,6 @@ class RoundedTextField extends StatelessWidget {
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(1000),
         ),
-        filled: true,
-        fillColor: Colors.white,
       ),
     );
   }

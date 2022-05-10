@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:example_blocs/screens/dice/dice_screen.dart';
+import 'package:example_blocs/screens/movies/movies_screen.dart';
 import 'package:example_blocs/screens/personal_card/personal_card_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -38,12 +39,23 @@ class MenuScreen extends StatelessWidget {
                   );
                 },
               ),
+              const SizedBox(height: 16),
               getMenuButton(
                 text: 'Dado',
                 onTap: () {
                   Navigator.pushNamed(
                     context,
                     DiceScreen.id,
+                  );
+                },
+              ),
+              const SizedBox(height: 16),
+              getMenuButton(
+                text: 'Filmes',
+                onTap: () {
+                  Navigator.pushNamed(
+                    context,
+                    MoviesScreen.id,
                   );
                 },
               ),
