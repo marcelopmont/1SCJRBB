@@ -1,12 +1,13 @@
-import 'package:example_blocs/screens/counter/counter_screen.dart';
-import 'package:example_blocs/screens/dice/dice_screen.dart';
-import 'package:example_blocs/screens/login/login_screen.dart';
-import 'package:example_blocs/screens/menu/menu_screen.dart';
-import 'package:example_blocs/screens/movies/movies_screen.dart';
-import 'package:example_blocs/screens/personal_card/personal_card_screen.dart';
+import 'package:example_blocs/data/usecases/auth/remote_login_with_email.dart';
+import 'package:example_blocs/data/usecases/auth/remote_register_with_email.dart';
+import 'package:example_blocs/main/factories/pages/login_screen_factory.dart';
+import 'package:example_blocs/presentation/login_presenter.dart';
+import 'package:example_blocs/ui/login/login_screen.dart';
+import 'package:example_blocs/ui/movies/movies_screen.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-
+import 'package:get/get.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -19,22 +20,16 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      initialRoute: MenuScreen.id,
-      routes: {
-        LoginScreen.id: (context) => const LoginScreen(),
-        MenuScreen.id: (context) => const MenuScreen(),
-        CounterScreen.id: (context) => const CounterScreen(),
-        DiceScreen.id: (context) => const DiceScreen(),
-        MoviesScreen.id: (context) => const MoviesScreen(),
-        PersonalCardScreen.id: (context) => PersonalCardScreen(
-              arguments: ModalRoute.of(context)?.settings.arguments as PersonalCardScreenArguments,
-            ),
-      },
+      initialRoute: LoginScreen.id,
+      getPages: [
+        GetPage(name: LoginScreen.id, page: makeLoginScreen),
+        GetPage(name: MoviesScreen.id, page: () => const MoviesScreen()),
+      ],
     );
   }
 }
