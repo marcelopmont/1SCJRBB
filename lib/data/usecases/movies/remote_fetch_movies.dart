@@ -22,7 +22,7 @@ class RemoteFetchMovies extends FetchMovies {
           .map<MovieEntity>((json) => MovieModel.fromJson(json).toEntity())
           .toList();
 
-      return moviesList;
+      return moviesList ?? [];
     } on HttpError catch (error) {
       if (error == HttpError.forbidden || error == HttpError.unauthorized) {
         throw DomainError.invalidCredentials;

@@ -8,8 +8,8 @@ class MoviesPresenter extends GetxController {
 
   final FetchMovies fetchMovies;
 
-  Rx<List<MovieEntity>> moviesList = Rx<List<MovieEntity>>([]);
-  RxString errorMessage = RxString('');
+  final moviesList = Rx<List<MovieEntity>>([]);
+  final errorMessage = RxString('');
 
   @override
   void onInit() async {

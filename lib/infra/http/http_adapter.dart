@@ -13,7 +13,7 @@ class HttpAdapter extends HttpClient {
   Future<Map<String, dynamic>?> get({required String url}) async {
     var response = Response('', 500);
     try {
-      final uri = Uri.parse('https://demo7206081.mockable.io/movies');
+      final uri = Uri.parse(url);
       response = await client.get(uri).timeout(
         const Duration(seconds: 10),
       );
@@ -27,6 +27,7 @@ class HttpAdapter extends HttpClient {
       case 401: throw HttpError.unauthorized;
       case 403: throw HttpError.forbidden;
       case 404: throw HttpError.notFound;
+      case 500: throw HttpError.serverError;
     }
 
   }
