@@ -3,7 +3,7 @@ import 'package:example_blocs/domain/usecases/auth/register_with_email.dart';
 import 'package:example_blocs/ui/movies/movies_screen.dart';
 import 'package:get/get.dart';
 
-class LoginPresenter {
+class LoginPresenter extends GetxController {
   LoginPresenter({
     required this.loginWithEmail,
     required this.registerWithEmail,

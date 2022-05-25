@@ -42,28 +42,4 @@ class LoginScreen extends StatelessWidget {
       ),
     );
   }
-
-// void makeLogin(BuildContext context, String email, String password) async {
-//   try {
-//     await FirebaseAuth.instance.signInWithEmailAndPassword(
-//       email: email,
-//       password: password,
-//     );
-//     Get.offNamed(MoviesScreen.id);
-//   } catch (error) {
-//     makeRegister(context, email, password);
-//   }
-// }
-//
-// void makeRegister(BuildContext context, String email, String password) async {
-//   try {
-//     await FirebaseAuth.instance.createUserWithEmailAndPassword(
-//       email: email,
-//       password: password,
-//     );
-//     Get.offNamed(MoviesScreen.id);
-//   } catch(error) {
-//     print(error);
-//   }
-// }
 }

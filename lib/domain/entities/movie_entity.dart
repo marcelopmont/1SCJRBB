@@ -1,5 +1,5 @@
-class Movie {
-  Movie({
+class MovieEntity {
+  MovieEntity({
     required this.name,
     required this.description,
     required this.image,
@@ -11,5 +11,3 @@ class Movie {
   String image;
   String rating;
 }
-
-

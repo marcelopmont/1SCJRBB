@@ -1,6 +1,7 @@
 import 'package:example_blocs/data/usecases/auth/remote_login_with_email.dart';
 import 'package:example_blocs/data/usecases/auth/remote_register_with_email.dart';
-import 'package:example_blocs/main/factories/pages/login_screen_factory.dart';
+import 'package:example_blocs/main/factories/pages/login/login_screen_factory.dart';
+import 'package:example_blocs/main/factories/pages/movies/movies_screen_factory.dart';
 import 'package:example_blocs/presentation/login_presenter.dart';
 import 'package:example_blocs/ui/login/login_screen.dart';
 import 'package:example_blocs/ui/movies/movies_screen.dart';
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
       initialRoute: LoginScreen.id,
       getPages: [
         GetPage(name: LoginScreen.id, page: makeLoginScreen),
-        GetPage(name: MoviesScreen.id, page: () => const MoviesScreen()),
+        GetPage(name: MoviesScreen.id, page: makeMoviesScreen),
       ],
     );
   }
