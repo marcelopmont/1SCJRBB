@@ -1,17 +1,17 @@
-import 'package:example_blocs/presentation/login_presenter.dart';
+import 'package:example_blocs/presentation/cadastrar_presenter.dart';
 import 'package:example_blocs/ui/login/components/rounded_button.dart';
 import 'package:example_blocs/ui/login/components/rounded_text_field.dart';
 import 'package:flutter/material.dart';
 
-class LoginScreen extends StatelessWidget {
-  static const String id = '/login';
+class CadastrarScreen extends StatelessWidget {
+  static const String id = '/cadastrar';
 
-  const LoginScreen({
+  const CadastrarScreen({
     Key? key,
     required this.presenter,
   }) : super(key: key);
 
-  final LoginPresenter presenter;
+  final CadastrarPresenter presenter;
 
   @override
   Widget build(BuildContext context) {
@@ -31,15 +31,20 @@ class LoginScreen extends StatelessWidget {
                 hint: 'Senha',
                 onTextChanged: presenter.onPasswordUpdate,
               ),
-              const SizedBox(height: 32.0),
-              RoundedButton(
-                text: 'Entrar',
-                onPressed: presenter.onLoginButtonPressed,
+              const SizedBox(height: 16),
+              RoundedTextField(
+                hint: 'Contra Senha',
+                onTextChanged: presenter.onPassword2Update,
               ),
               const SizedBox(height: 32.0),
               RoundedButton(
                 text: 'Cadastrar',
-                onPressed: presenter.onLoginButtonPressed,
+                onPressed: presenter.onCadastrarButtonPressed,
+              ),
+              const SizedBox(height: 32.0),
+              RoundedButton(
+                text: 'Entrar',
+                onPressed: presenter.onCadastrarButtonPressed,
               ),
             ],
           ),

@@ -1,6 +1,6 @@
 # example_blocs
 
-A new Flutter project.
+Projeto final do MBA FIAP .
 
 ## Getting Started
 
