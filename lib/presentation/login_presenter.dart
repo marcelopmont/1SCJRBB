@@ -1,5 +1,7 @@
 import 'package:example_blocs/domain/usecases/auth/login_with_email.dart';
 import 'package:example_blocs/domain/usecases/auth/register_with_email.dart';
+import 'package:example_blocs/ui/cadastro/login_screen.dart';
+import 'package:example_blocs/ui/login/login_screen.dart';
 import 'package:example_blocs/ui/movies/movies_screen.dart';
 import 'package:get/get.dart';
 
@@ -23,13 +25,22 @@ class LoginPresenter extends GetxController {
     userPassword = password;
   }
 
-  void onLoginButtonPressed() async {
+  Future<bool> onLoginButtonPressed() async {
     var user = await loginWithEmail.execute(userEmail, userPassword);
-    user ??= await registerWithEmail.execute(userEmail, userPassword);
-    if (user == null) {
-      // show error message
-    } else {
-      Get.offNamed(MoviesScreen.id);
-    }
+    // user ??= await registerWithEmail.execute(userEmail, userPassword);
+    return user == null;
+    // if (user == null) {
+    //   // show error message
+    //   return true;
+    //   // update();
+    // } else {
+    //   Get.offNamed(MoviesScreen.id);
+    // }
+  }
+
+  void onCadastrarButtonPressed() async {
+    // var user = await registerWithEmail.execute(userEmail, userPassword);
+    // return user == null;
+    Get.offNamed(CadastrarScreen.id);
   }
 }

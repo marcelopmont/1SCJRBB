@@ -1,10 +1,6 @@
-import 'package:example_blocs/data/usecases/auth/remote_login_with_email.dart';
-import 'package:example_blocs/main/factories/pages/login/login_screen_factory.dart';
-import 'package:example_blocs/main/factories/pages/movies/movies_screen_factory.dart';
-import 'package:example_blocs/main/factories/usecases/auth/remote_login_with_email_factory.dart';
+import 'dart:async';
+
 import 'package:example_blocs/presentation/splash_presenter.dart';
-import 'package:example_blocs/ui/login/login_screen.dart';
-import 'package:example_blocs/ui/movies/movies_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -26,11 +22,13 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    widget.presenter.verificaLogin();
   }
 
   @override
   Widget build(BuildContext context) {
+    Timer(Duration(seconds: 3), () {
+      widget.presenter.verificaLogin();
+    });
     return Scaffold(
         body: Center(
       child: Column(
