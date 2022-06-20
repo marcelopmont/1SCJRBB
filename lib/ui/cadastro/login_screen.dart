@@ -44,7 +44,7 @@ class CadastrarScreen extends StatelessWidget {
               const SizedBox(height: 32.0),
               RoundedButton(
                 text: 'Entrar',
-                onPressed: presenter.onCadastrarButtonPressed,
+                onPressed: presenter.onLoginrButtonPressed,
               ),
             ],
           ),

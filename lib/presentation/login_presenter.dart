@@ -14,8 +14,8 @@ class LoginPresenter extends GetxController {
   LoginWithEmail loginWithEmail;
   RegisterWithEmail registerWithEmail;
 
-  var userEmail = 'eu@eu.com';
-  var userPassword = '123456';
+  var userEmail = '';
+  var userPassword = '';
 
   void onUserEmailUpdate(String email) {
     userEmail = email;
