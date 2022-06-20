@@ -80,6 +80,7 @@ class CriptosPresenter extends GetxController {
     //     ? allCriptos.map((data) => criptosList)
     //     : allCriptos.map((data) => criptosList);
     tela.value == PRINCIPAL ? setTela(FAVORITAS) : setTela(PRINCIPAL);
+    montaLista();
     criptosList.refresh();
   }
 
@@ -91,7 +92,17 @@ class CriptosPresenter extends GetxController {
     this.tela.value = tela;
   }
 
-  teste(e) {
-    print(e);
+  montaLista() {
+    if (tela.value == FAVORITAS) {
+      return criptosList.value.where((cripto) => cripto.favorite).toList();
+    }
+    return criptosList.value;
+  }
+
+  mostratIconeFavoritos() {
+    if (tela.value == FAVORITAS) {
+      return false;
+    }
+    return true;
   }
 }

@@ -41,7 +41,7 @@ class CriptosScreen extends StatelessWidget {
       body: SafeArea(
         child: Obx(
           () {
-            final criptosList = presenter.criptosList.value;
+            final criptosList = presenter.montaLista();
             return ListView.separated(
               itemCount: criptosList.length,
               separatorBuilder: (context, index) => const SizedBox(height: 15),
@@ -51,17 +51,15 @@ class CriptosScreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                 ),
                 clipBehavior: Clip.antiAliasWithSaveLayer,
-                child: Visibility(
-                  visible: presenter.getTela() == presenter.PRINCIPAL
-                      ? true
-                      : criptosList[index].favorite,
-                  child: SizedBox(
-                    height: 50,
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        SizedBox(
-                          height: 60,
+                child: SizedBox(
+                  height: 50,
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SizedBox(
+                        height: 60,
+                        child: Visibility(
+                          visible: presenter.mostratIconeFavoritos(),
                           child: Column(
                             children: [
                               Padding(
@@ -80,79 +78,79 @@ class CriptosScreen extends StatelessWidget {
                             ],
                           ),
                         ),
-                        SizedBox(
-                          height: 60,
-                          width: 50,
-                          child: Column(
+                      ),
+                      SizedBox(
+                        height: 60,
+                        width: 50,
+                        child: Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(4.0),
+                              child: SvgPicture.network(
+                                criptosList[index].logo,
+                                height: 35,
+                                width: 35,
+                                fit: BoxFit.fitWidth,
+                                // placeholderBuilder: (BuildContext context) =>
+                                //     Container(
+                                //         padding: const EdgeInsets.all(4.0),
+                                //         child:
+                                //             const CircularProgressIndicator()),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
                             children: [
-                              Padding(
-                                padding: const EdgeInsets.all(4.0),
-                                child: SvgPicture.network(
-                                  criptosList[index].logo,
-                                  height: 35,
-                                  width: 35,
-                                  fit: BoxFit.fitWidth,
-                                  // placeholderBuilder: (BuildContext context) =>
-                                  //     Container(
-                                  //         padding: const EdgeInsets.all(4.0),
-                                  //         child:
-                                  //             const CircularProgressIndicator()),
+                              Text(
+                                criptosList[index].id,
+                                overflow: TextOverflow.ellipsis,
+                                style: const TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
                                 ),
                               ),
                             ],
                           ),
-                        ),
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Row(
-                              children: [
-                                Text(
-                                  criptosList[index].id,
+                          Row(
+                            children: [
+                              SizedBox(
+                                width: 80,
+                                child: Text(
+                                  criptosList[index].name,
                                   overflow: TextOverflow.ellipsis,
                                   style: const TextStyle(
                                     fontSize: 18,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
-                              ],
-                            ),
-                            Row(
-                              children: [
-                                SizedBox(
-                                  width: 80,
-                                  child: Text(
-                                    criptosList[index].name,
-                                    overflow: TextOverflow.ellipsis,
-                                    style: const TextStyle(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Text(
-                                'R\$ ' + criptosList[index].price,
-                                style: const TextStyle(
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.bold,
-                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text(
+                              'R\$ ' + criptosList[index].price,
+                              style: const TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
                               ),
                             ),
-                          ],
-                        ),
-                      ],
-                    ),
+                          ),
+                        ],
+                      ),
+                    ],
                   ),
                 ),
               ),
