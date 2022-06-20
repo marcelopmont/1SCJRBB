@@ -19,7 +19,7 @@ class RemoteFetchCripto extends FetchCriptos {
     try {
       final response = await httpClient.get(
           url:
-              'https://api.nomics.com/v1/currencies/ticker?key=ae7b22576f7d72495741259bd9620b36f256789b&ids=BTC,ETH,&interval=1d&convert=BRL');
+              'https://api.nomics.com/v1/currencies/ticker?key=ae7b22576f7d72495741259bd9620b36f256789b&ids=BTC,ETH,USDT,USDC,BNB,BUSD,ADA,XRP,SOL, DOGE,DOT,DAI&interval=1d&convert=BRL');
 
       final criptosList = response?['criptos']
           .map<CriptoEntity>((json) => CriptoModel.fromJson(json).toEntity())
