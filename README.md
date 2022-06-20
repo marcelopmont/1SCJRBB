@@ -18,7 +18,7 @@ Aplicação desenvolvida com o framework Flutter que atende as funcionalidades r
 
 ## 📱 Amostra da aplicação
 
-![Telas Aplicação](/assets/videos/Demonstracao.mp4)
+https://user-images.githubusercontent.com/20494741/174686522-b921362e-d540-4773-87eb-3bebbea12931.mp4
 
 ## ⚙️ Como executar o projeto
 1. Clonar projeto do GitHub:
@@ -45,13 +45,8 @@ cd FavoritesCryptos
 
 ## 👨🏽‍💻 Desenvolvedores
 
-| [<img src="https://avatars.githubusercontent.com/AlexDamiao86" width=115><br><sub>Alexandre Damião Mendonça Maia</sub>](https://github.com/AlexDamiao86) 
-| [<img src="https://avatars.githubusercontent.com/FabioQuimico" width=115><br><sub>Fabio Ferreira dos Santos</sub>](https://github.com/FabioQuimico)   
-| [<img src="https://avatars.githubusercontent.com/" width=115><br><sub>Gabriel Oliveira Barbosa</sub>](https://github.com/)
-| [<img src="https://avatars.githubusercontent.com/ferreirabraga" width=115><br><sub>Rafael Braga da Silva Ferreira</sub>](https://github.com/ferreirabraga)
-| [<img src="https://avatars.githubusercontent.com/" width=115><br><sub>Rafael Oliveira Borges</sub>](https://github.com/) |
+| [<img src="https://avatars.githubusercontent.com/AlexDamiao86" width=115><br><sub>Alexandre Damião Mendonça Maia</sub>](https://github.com/AlexDamiao86) |  [<img src="https://avatars.githubusercontent.com/FabioQuimico" width=115><br><sub>Fabio Ferreira dos Santos</sub>](https://github.com/FabioQuimico) |  [<img src="https://avatars.githubusercontent.com/" width=115><br><sub>Gabriel Oliveira Barbosa</sub>](https://github.com/) | [<img src="https://avatars.githubusercontent.com/ferreirabraga" width=115><br><sub>Rafael Braga da Silva Ferreira</sub>](https://github.com/ferreirabraga) |  [<img src="https://avatars.githubusercontent.com/" width=115><br><sub>Rafael Oliveira Borges</sub>](https://github.com/) |
 | :---: | :---: | :---: | :---: | :---: |
-
 
 > Projeto realizado como requisito para conclusão da disciplina Mobile Platform do MBA Full Stack Development - FIAP 2022
 > Prof. Marcelo Pinheiro Montanher (https://github.com/marcelopmont)
