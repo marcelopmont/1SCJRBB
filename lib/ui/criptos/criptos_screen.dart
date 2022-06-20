@@ -26,6 +26,18 @@ class CriptosScreen extends StatelessWidget {
     });
 
     return Scaffold(
+      appBar: AppBar(
+        title: Obx(() => Text(presenter.tela.value)),
+        actions: <Widget>[
+          IconButton(
+            icon: const Icon(Icons.logout),
+            tooltip: 'Logout',
+            onPressed: () {
+              presenter.singout();
+            },
+          ),
+        ],
+      ),
       body: SafeArea(
         child: Obx(
           () {
@@ -39,82 +51,78 @@ class CriptosScreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                 ),
                 clipBehavior: Clip.antiAliasWithSaveLayer,
-                child: SizedBox(
-                  height: 50,
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      SizedBox(
-                        height: 60,
-                        child: Column(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.all(0.1),
-                              child: IconButton(
-                                iconSize: 15,
-                                onPressed: () => presenter.setFavorite(index),
-                                icon: criptosList[index].favorite
-                                    ? Icon(Icons.favorite)
-                                    : Icon(Icons.favorite_border),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      SizedBox(
-                        height: 60,
-                        child: Column(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.all(4.0),
-                              child: SvgPicture.network(
-                                criptosList[index].logo,
-                                height: 35,
-                                width: 35,
-                                fit: BoxFit.fitWidth,
-                                placeholderBuilder: (BuildContext context) =>
-                                    Container(
-                                        padding: const EdgeInsets.all(10.0),
-                                        child:
-                                            const CircularProgressIndicator()),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Row(
+                child: Visibility(
+                  visible: presenter.getTela() == presenter.PRINCIPAL
+                      ? true
+                      : criptosList[index].favorite,
+                  child: SizedBox(
+                    height: 50,
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        SizedBox(
+                          height: 60,
+                          child: Column(
                             children: [
-                              Text(
-                                criptosList[index].id,
-                                overflow: TextOverflow.ellipsis,
-                                style: const TextStyle(
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.bold,
+                              Padding(
+                                padding: const EdgeInsets.all(0.1),
+                                child: IconButton(
+                                  iconSize: 15,
+                                  onPressed: () => presenter.setFavorite(index),
+                                  icon: criptosList[index].favorite
+                                      ? Icon(
+                                          Icons.favorite,
+                                          color: Colors.red,
+                                        )
+                                      : Icon(Icons.favorite_border),
                                 ),
                               ),
                             ],
                           ),
-                          Row(
+                        ),
+                        SizedBox(
+                          height: 60,
+                          width: 50,
+                          child: Column(
                             children: [
-                              Column(
-                                children: [
-                                  Text(
-                                    criptosList[index].rank,
-                                    overflow: TextOverflow.ellipsis,
-                                    style: const TextStyle(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                ],
+                              Padding(
+                                padding: const EdgeInsets.all(4.0),
+                                child: SvgPicture.network(
+                                  criptosList[index].logo,
+                                  height: 35,
+                                  width: 35,
+                                  fit: BoxFit.fitWidth,
+                                  // placeholderBuilder: (BuildContext context) =>
+                                  //     Container(
+                                  //         padding: const EdgeInsets.all(4.0),
+                                  //         child:
+                                  //             const CircularProgressIndicator()),
+                                ),
                               ),
-                              Column(
-                                children: [
-                                  Text(
+                            ],
+                          ),
+                        ),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              children: [
+                                Text(
+                                  criptosList[index].id,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: const TextStyle(
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                SizedBox(
+                                  width: 80,
+                                  child: Text(
                                     criptosList[index].name,
                                     overflow: TextOverflow.ellipsis,
                                     style: const TextStyle(
@@ -122,29 +130,29 @@ class CriptosScreen extends StatelessWidget {
                                       fontWeight: FontWeight.bold,
                                     ),
                                   ),
-                                ],
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Text(
-                              'R\$ ' + criptosList[index].price,
-                              style: const TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold,
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Text(
+                                'R\$ ' + criptosList[index].price,
+                                style: const TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
                             ),
-                          ),
-                        ],
-                      ),
-                    ],
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),
@@ -152,10 +160,18 @@ class CriptosScreen extends StatelessWidget {
           },
         ),
       ),
-      bottomNavigationBar: TextButton(
-        child: Text("Logount"),
-        //TODO: acrescentar a chamda via presenter
-        onPressed: () => FirebaseAuth.instance.signOut(),
+      bottomNavigationBar: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          TextButton(
+            //se for a tela principal mostrar o label para a tela de favoritos
+            child: Obx(() => presenter.tela.value == presenter.PRINCIPAL
+                ? Text(presenter.FAVORITAS)
+                : Text(presenter.PRINCIPAL)),
+            //TODO: acrescentar a chamda via presenter
+            onPressed: () => presenter.mostraFavoritos(),
+          )
+        ],
       ),
     );
   }

@@ -1,6 +1,9 @@
 import 'package:example_blocs/domain/entities/cripto_entity.dart';
+import 'package:intl/intl.dart';
 
 class CriptoModel {
+  final oCcy = new NumberFormat("#,##0.00", "pt_br");
+
   CriptoModel({
     required this.id,
     required this.name,
@@ -16,7 +19,7 @@ class CriptoModel {
   String price;
   bool favorite = false;
 
-  factory CriptoModel.fromJson(Map json) => CriptoModel(
+  factory CriptoModel.fromJson(json) => CriptoModel(
         id: json['id'].toString(),
         name: json['name'],
         logo: json['logo_url'],
@@ -28,7 +31,12 @@ class CriptoModel {
         id: id,
         name: name,
         logo: logo,
-        price: price,
+        price: formataValor(double.parse(price)),
         rank: rank,
       );
+
+  String formataValor(value) {
+    NumberFormat formatter = NumberFormat.simpleCurrency(locale: 'pt_BR');
+    return formatter.format(value);
+  }
 }

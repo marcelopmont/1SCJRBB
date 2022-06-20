@@ -310,6 +310,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.1"
+  localstore:
+    dependency: "direct dev"
+    description:
+      name: localstore
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.2.3"
   logging:
     dependency: transitive
     description:
