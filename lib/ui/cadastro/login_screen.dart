@@ -33,7 +33,7 @@ class CadastrarScreen extends StatelessWidget {
               ),
               const SizedBox(height: 16),
               RoundedTextField(
-                hint: 'Contra Senha',
+                hint: 'Repetir Senha',
                 onTextChanged: presenter.onPassword2Update,
               ),
               const SizedBox(height: 32.0),

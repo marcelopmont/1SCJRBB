@@ -68,11 +68,11 @@ class CriptosScreen extends StatelessWidget {
                                   iconSize: 15,
                                   onPressed: () => presenter.setFavorite(index),
                                   icon: criptosList[index].favorite
-                                      ? Icon(
+                                      ? const Icon(
                                           Icons.favorite,
                                           color: Colors.red,
                                         )
-                                      : Icon(Icons.favorite_border),
+                                      : const Icon(Icons.favorite_border),
                                 ),
                               ),
                             ],
@@ -141,7 +141,7 @@ class CriptosScreen extends StatelessWidget {
                           Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Text(
-                              'R\$ ' + criptosList[index].price,
+                              criptosList[index].price,
                               style: const TextStyle(
                                 fontSize: 18,
                                 fontWeight: FontWeight.bold,

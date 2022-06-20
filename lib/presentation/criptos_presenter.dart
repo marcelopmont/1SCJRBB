@@ -12,7 +12,7 @@ class CriptosPresenter extends GetxController {
 
   final FetchCriptos fetchCriptos;
 
-  final String PRINCIPAL = 'Principal';
+  final String PRINCIPAL = 'Cryptos';
   final String FAVORITAS = 'Favoritas';
   var tela = RxString('');
 
