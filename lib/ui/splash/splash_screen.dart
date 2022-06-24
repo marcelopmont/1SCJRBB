@@ -1,10 +1,9 @@
 import 'dart:async';
 
-import 'package:example_blocs/presentation/splash_presenter.dart';
+import 'package:favorites_cryptos/presentation/splash_presenter.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:get/get.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key, required this.presenter}) : super(key: key);
@@ -26,7 +25,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    Timer(Duration(seconds: 3), () {
+    Timer(const Duration(seconds: 3), () {
       widget.presenter.verificaLogin();
     });
     return Scaffold(
@@ -34,7 +33,7 @@ class _SplashScreenState extends State<SplashScreen> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
+        children: const [
           CircularProgressIndicator(
             color: Colors.red,
           ),

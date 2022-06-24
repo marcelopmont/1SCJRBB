@@ -1,6 +1,6 @@
-import 'package:example_blocs/domain/usecases/auth/register_with_email.dart';
-import 'package:example_blocs/ui/login/login_screen.dart';
-import 'package:example_blocs/ui/movies/movies_screen.dart';
+import 'package:favorites_cryptos/domain/usecases/auth/register_with_email.dart';
+import 'package:favorites_cryptos/ui/login/login_screen.dart';
+import 'package:favorites_cryptos/ui/movies/movies_screen.dart';
 import 'package:get/get.dart';
 
 class CadastrarPresenter extends GetxController {

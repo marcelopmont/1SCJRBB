@@ -1,4 +1,4 @@
-import 'package:example_blocs/domain/entities/cripto_entity.dart';
+import 'package:favorites_cryptos/domain/entities/cripto_entity.dart';
 import 'package:intl/intl.dart';
 
 class CriptoModel {

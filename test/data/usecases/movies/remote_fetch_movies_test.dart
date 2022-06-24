@@ -1,6 +1,6 @@
-import 'package:example_blocs/data/http/http_client.dart';
-import 'package:example_blocs/data/http/http_error.dart';
-import 'package:example_blocs/domain/utils/domain_error.dart';
+import 'package:favorites_cryptos/data/http/http_client.dart';
+import 'package:favorites_cryptos/data/http/http_error.dart';
+import 'package:favorites_cryptos/domain/utils/domain_error.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 

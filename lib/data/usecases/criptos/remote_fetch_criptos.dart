@@ -1,11 +1,9 @@
-import 'package:example_blocs/data/http/http_client.dart';
-import 'package:example_blocs/data/http/http_error.dart';
-import 'package:example_blocs/data/usecases/criptos/models/cripto_model.dart';
-import 'package:example_blocs/domain/entities/cripto_entity.dart';
-import 'package:example_blocs/domain/entities/movie_entity.dart';
-import 'package:example_blocs/domain/usecases/criptos/fetch_criptos.dart';
-import 'package:example_blocs/domain/usecases/movies/fetch_movies.dart';
-import 'package:example_blocs/domain/utils/domain_error.dart';
+import 'package:favorites_cryptos/data/http/http_client.dart';
+import 'package:favorites_cryptos/data/http/http_error.dart';
+import 'package:favorites_cryptos/data/usecases/criptos/models/cripto_model.dart';
+import 'package:favorites_cryptos/domain/entities/cripto_entity.dart';
+import 'package:favorites_cryptos/domain/usecases/criptos/fetch_criptos.dart';
+import 'package:favorites_cryptos/domain/utils/domain_error.dart';
 
 class RemoteFetchCripto extends FetchCriptos {
   RemoteFetchCripto({

@@ -1,17 +1,11 @@
-import 'package:example_blocs/data/usecases/auth/remote_login_with_email.dart';
-import 'package:example_blocs/data/usecases/auth/remote_register_with_email.dart';
-import 'package:example_blocs/main/factories/pages/cadastrar/cadastrar_screen_factory.dart';
-import 'package:example_blocs/main/factories/pages/criptos/criptos_screen_factory.dart';
-import 'package:example_blocs/main/factories/pages/login/login_screen_factory.dart';
-import 'package:example_blocs/main/factories/pages/splash/splash_presenter_factory.dart';
-import 'package:example_blocs/main/factories/pages/splash/splash_screen_factory.dart';
-import 'package:example_blocs/presentation/login_presenter.dart';
-import 'package:example_blocs/ui/cadastro/login_screen.dart';
-import 'package:example_blocs/ui/criptos/criptos_screen.dart';
-import 'package:example_blocs/ui/login/login_screen.dart';
-import 'package:example_blocs/ui/movies/movies_screen.dart';
-import 'package:example_blocs/ui/splash/splash_screen.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:favorites_cryptos/main/factories/pages/cadastrar/cadastrar_screen_factory.dart';
+import 'package:favorites_cryptos/main/factories/pages/criptos/criptos_screen_factory.dart';
+import 'package:favorites_cryptos/main/factories/pages/login/login_screen_factory.dart';
+import 'package:favorites_cryptos/main/factories/pages/splash/splash_screen_factory.dart';
+import 'package:favorites_cryptos/ui/cadastro/login_screen.dart';
+import 'package:favorites_cryptos/ui/criptos/criptos_screen.dart';
+import 'package:favorites_cryptos/ui/login/login_screen.dart';
+import 'package:favorites_cryptos/ui/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:get/get.dart';
@@ -28,7 +22,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'Flutter Demo',
+      title: 'Favorites Cryptos',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),

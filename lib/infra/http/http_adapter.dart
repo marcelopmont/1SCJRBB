@@ -1,7 +1,7 @@
 import 'dart:convert';
 
-import 'package:example_blocs/data/http/http_client.dart';
-import 'package:example_blocs/data/http/http_error.dart';
+import 'package:favorites_cryptos/data/http/http_client.dart';
+import 'package:favorites_cryptos/data/http/http_error.dart';
 import 'package:http/http.dart';
 
 class HttpAdapter extends HttpClient {

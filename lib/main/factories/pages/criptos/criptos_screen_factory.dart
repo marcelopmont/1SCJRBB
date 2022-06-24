@@ -1,6 +1,6 @@
-import 'package:example_blocs/main/factories/pages/criptos/criptos_presenter_factory.dart';
-import 'package:example_blocs/presentation/criptos_presenter.dart';
-import 'package:example_blocs/ui/criptos/criptos_screen.dart';
+import 'package:favorites_cryptos/main/factories/pages/criptos/criptos_presenter_factory.dart';
+import 'package:favorites_cryptos/presentation/criptos_presenter.dart';
+import 'package:favorites_cryptos/ui/criptos/criptos_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

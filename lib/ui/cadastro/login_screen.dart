@@ -1,6 +1,6 @@
-import 'package:example_blocs/presentation/cadastrar_presenter.dart';
-import 'package:example_blocs/ui/login/components/rounded_button.dart';
-import 'package:example_blocs/ui/login/components/rounded_text_field.dart';
+import 'package:favorites_cryptos/presentation/cadastrar_presenter.dart';
+import 'package:favorites_cryptos/ui/login/components/rounded_button.dart';
+import 'package:favorites_cryptos/ui/login/components/rounded_text_field.dart';
 import 'package:flutter/material.dart';
 
 class CadastrarScreen extends StatelessWidget {

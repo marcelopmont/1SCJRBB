@@ -1,4 +1,4 @@
-import 'package:example_blocs/presentation/movies_presenter.dart';
+import 'package:favorites_cryptos/presentation/movies_presenter.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

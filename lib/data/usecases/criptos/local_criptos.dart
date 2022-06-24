@@ -1,6 +1,4 @@
-import 'dart:convert';
 
-import 'package:example_blocs/domain/entities/cripto_entity.dart';
 import 'package:localstore/localstore.dart';
 
 class LocalCripto {

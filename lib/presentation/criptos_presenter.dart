@@ -1,9 +1,8 @@
-import 'dart:convert';
 
-import 'package:example_blocs/data/usecases/criptos/local_criptos.dart';
-import 'package:example_blocs/domain/entities/cripto_entity.dart';
-import 'package:example_blocs/domain/usecases/criptos/fetch_criptos.dart';
-import 'package:example_blocs/domain/utils/domain_error.dart';
+import 'package:favorites_cryptos/data/usecases/criptos/local_criptos.dart';
+import 'package:favorites_cryptos/domain/entities/cripto_entity.dart';
+import 'package:favorites_cryptos/domain/usecases/criptos/fetch_criptos.dart';
+import 'package:favorites_cryptos/domain/utils/domain_error.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
 

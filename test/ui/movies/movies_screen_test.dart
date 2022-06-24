@@ -1,8 +1,6 @@
-import 'dart:io';
-
-import 'package:example_blocs/domain/entities/movie_entity.dart';
-import 'package:example_blocs/presentation/movies_presenter.dart';
-import 'package:example_blocs/ui/movies/movies_screen.dart';
+import 'package:favorites_cryptos/domain/entities/movie_entity.dart';
+import 'package:favorites_cryptos/presentation/movies_presenter.dart';
+import 'package:favorites_cryptos/ui/movies/movies_screen.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:get/get.dart';
 import 'package:mocktail/mocktail.dart';

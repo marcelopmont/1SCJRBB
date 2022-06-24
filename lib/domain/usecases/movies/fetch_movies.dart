@@ -1,4 +1,4 @@
-import 'package:example_blocs/domain/entities/movie_entity.dart';
+import 'package:favorites_cryptos/domain/entities/movie_entity.dart';
 
 abstract class FetchMovies {
   Future<List<MovieEntity>> execute();

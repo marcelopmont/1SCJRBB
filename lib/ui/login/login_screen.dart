@@ -1,8 +1,7 @@
-import 'package:example_blocs/presentation/login_presenter.dart';
-import 'package:example_blocs/ui/criptos/criptos_screen.dart';
-import 'package:example_blocs/ui/login/components/rounded_button.dart';
-import 'package:example_blocs/ui/login/components/rounded_text_field.dart';
-import 'package:example_blocs/ui/movies/movies_screen.dart';
+import 'package:favorites_cryptos/presentation/login_presenter.dart';
+import 'package:favorites_cryptos/ui/criptos/criptos_screen.dart';
+import 'package:favorites_cryptos/ui/login/components/rounded_button.dart';
+import 'package:favorites_cryptos/ui/login/components/rounded_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

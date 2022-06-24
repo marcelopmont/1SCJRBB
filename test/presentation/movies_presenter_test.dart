@@ -1,7 +1,7 @@
-import 'package:example_blocs/domain/entities/movie_entity.dart';
-import 'package:example_blocs/domain/usecases/movies/fetch_movies.dart';
-import 'package:example_blocs/domain/utils/domain_error.dart';
-import 'package:example_blocs/presentation/movies_presenter.dart';
+import 'package:favorites_cryptos/domain/entities/movie_entity.dart';
+import 'package:favorites_cryptos/domain/usecases/movies/fetch_movies.dart';
+import 'package:favorites_cryptos/domain/utils/domain_error.dart';
+import 'package:favorites_cryptos/presentation/movies_presenter.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 

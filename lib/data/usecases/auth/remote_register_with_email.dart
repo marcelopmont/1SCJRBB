@@ -1,4 +1,4 @@
-import 'package:example_blocs/domain/usecases/auth/register_with_email.dart';
+import 'package:favorites_cryptos/domain/usecases/auth/register_with_email.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 class RemoteRegisterWithEmail extends RegisterWithEmail {
