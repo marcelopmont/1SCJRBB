@@ -1,9 +1,7 @@
 import 'dart:async';
 
 import 'package:favorites_cryptos/presentation/splash_presenter.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key, required this.presenter}) : super(key: key);

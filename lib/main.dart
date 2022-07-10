@@ -21,6 +21,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    key: const Key('myApp');
     return GetMaterialApp(
       title: 'Favorites Cryptos',
       theme: ThemeData(

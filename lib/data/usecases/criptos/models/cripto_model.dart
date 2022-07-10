@@ -2,7 +2,7 @@ import 'package:favorites_cryptos/domain/entities/cripto_entity.dart';
 import 'package:intl/intl.dart';
 
 class CriptoModel {
-  final oCcy = new NumberFormat("#,##0.00", "pt_br");
+  final oCcy = NumberFormat("#,##0.00", "pt_br");
 
   CriptoModel({
     required this.id,

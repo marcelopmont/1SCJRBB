@@ -22,10 +22,10 @@ void main() {
   // late RemoteFetchMovies sut;
   late HttpClientMock httpClient;
 
-  // setUp(() {
-  //   httpClient = HttpClientMock();
-  //   sut = RemoteFetchMovies(httpClient: httpClient);
-  // });
+  setUp(() {
+    httpClient = HttpClientMock();
+    //sut = RemoteFetchMovies(httpClient: httpClient);
+  });
 
   // test('Should call httpClient get with correct values', () async {
   //   await sut.execute();

@@ -10,6 +10,7 @@ class ClientMock extends Mock implements Client {
     mockGet(200);
   }
 
+  // void mockGet(int statusCode, {String body = '{"any_key":"any_value"}'}) =>
   void mockGet(int statusCode, {String body = '{"any_key":"any_value"}'}) =>
       when(() => this.get(any()))
           .thenAnswer((_) async => Response(body, statusCode));
@@ -31,22 +32,17 @@ void main() {
     registerFallbackValue(Uri.parse(url));
   });
 
+// Teste OK
   test('Should call get with correct values', () async {
     await sut.get(url: url);
     verify(
-          () => client.get(
+      () => client.get(
         Uri.parse(url),
       ),
     );
   });
 
-  //TODO: Arrumar teste
-/*  test('Should return data if get returns 200', () async {
-    final response = await sut.get(url: url);
-
-    expect(response, {'any_key': 'any_value'});
-  });*/
-
+// Teste ok
   test('Should return null if get returns 200 with no data', () async {
     client.mockGet(200, body: '');
 
@@ -55,6 +51,7 @@ void main() {
     expect(response, null);
   });
 
+// Teste ok
   test('Should return null if get returns 204', () async {
     client.mockGet(204);
 

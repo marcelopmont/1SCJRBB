@@ -45,7 +45,7 @@ class LoginScreen extends StatelessWidget {
                   text: 'Cadastrar',
                   onPressed: presenter.onCadastrarButtonPressed,
                 ),
-                // verificaDadosLogin(context)
+                //verificaDadosLogin(context)
               ],
             ),
           ),
