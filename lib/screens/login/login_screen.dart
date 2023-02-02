@@ -1,6 +1,6 @@
 import 'package:example_blocs/screens/login/components/rounded_button.dart';
 import 'package:example_blocs/screens/login/components/rounded_text_field.dart';
-import 'package:example_blocs/screens/menu/menu_screen.dart';
+import 'package:example_blocs/screens/movies/movies_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
@@ -52,7 +52,7 @@ class LoginScreen extends StatelessWidget {
         email: email,
         password: password,
       );
-      Navigator.pushReplacementNamed(context, MenuScreen.id);
+      Navigator.pushReplacementNamed(context, MoviesScreen.id);
     } catch (error) {
       makeRegister(context, email, password);
     }
@@ -64,8 +64,8 @@ class LoginScreen extends StatelessWidget {
         email: email,
         password: password,
       );
-      Navigator.pushReplacementNamed(context, MenuScreen.id);
-    } catch(error) {
+      Navigator.pushReplacementNamed(context, MoviesScreen.id);
+    } catch (error) {
       print(error);
     }
   }
